@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "@mui/material/Button";
+import { Box , Stack } from "@mui/material";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import Sidebar from "./components/Sidebar";
+import Rightbar from "./components/Rightbar";
+import Navbar from "./components/Navbar";
+import Feed from "./components/Feed";
+
+
+const App = ()=>{
+    return(
+        <Box>
+            
+            <Navbar/>
+
+            <Stack direction="row" justifyContent="space-between" spacing={2}>
+                <Sidebar/>
+                <Feed/>
+                <Rightbar/>
+            </Stack>
+        </Box>
+        
+
+        // <Box display="flex" justifyContent="space-evenly" bgcolor="skyblue">
+        //     <Button variant="text">Text</Button>
+        //     <Button variant="contained">Contained</Button>
+        //     <Button variant="outlined">Outlined</Button>
+        //     {/* <Button variant="contained" disableElevation>
+        //         Disable elevation
+        //     </Button> */}
+        //     <Button color="primary">Secondary</Button>
+        //     <Button variant="contained" color="success">
+        //     Success
+        //     </Button>
+        //     <Button variant="outlined" color="error">
+        //     Error
+        //     </Button>
+        // </Box>
+    )
+    
 }
 
 export default App;
+
